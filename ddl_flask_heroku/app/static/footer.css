@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -300px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 500px; /* .push must be the same height as .footer */
+    background-image: url('fabric2.jpg');
+      background-size: cover;
+      color: white;
+}
+
+#footertext {
+  padding-top: 400px;
+}

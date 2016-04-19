@@ -1,0 +1,79 @@
+@import url('//fonts.googleapis.com/css?family=Lustria:400,700,300');
+@import url('//fonts.googleapis.com/css?family=Lato:400,700,300');
+:root {
+  --reddish: #962D3E;
+  --blueish: #348899;
+  --whiteish: #F2EBC7;
+  --grey: #ddd;
+}
+
+.counties {
+	fill: none;
+	stroke: black;
+	stroke-width:.2;
+}
+
+.states {
+	fill: none;
+	stroke: grey;
+	stroke-linejoin: round;	
+	stroke-width:1;
+}
+
+.select {
+	margin-top: 8px;
+	height: 34px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	font-size: 100%;
+ }
+
+#selectPer{
+	width: 160px;
+}
+
+#selectType{
+	width: 280px;
+}
+svg#map{
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+#map {
+  margin: 0 auto;
+}
+
+#links{
+	text-align: center;
+}
+
+#navbar {
+
+  height: 70px;
+  text-align: middle;
+}
+  --reddish: #962D3E;
+  --blueish: #348899;
+  --whiteish: #F2EBC7;
+
+.Aboutbtn {
+  margin-right: 10px;
+}
+
+
+#legend {
+    padding: 1.5em 0 0 1.5em;
+}
+
+li.key {
+    border-top-width: 15px;
+    border-top-style: solid;
+    font-size: .2em;
+    width: 10%;
+    padding-left: 0;
+    padding-right: 2em;
+}
+

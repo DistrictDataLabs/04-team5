@@ -1,0 +1,82 @@
+:root {
+  --reddish: #962D3E;
+  --blueish: #348899;
+  --whiteish: #F2EBC7;
+  --grey: #ddd;
+  #21499F;
+  #CA4433;
+ #E9E2DF;
+
+ --map1: #ffffcc;
+ --map2: #a1dab4;
+ --map3: #41b6c4;
+ --map4: #2c7fb8;
+ --map5: #253494;
+
+}
+.jumbotron {
+  background-image: url("news.jpeg");
+  background-size: cover;
+  border: 2px solid black;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 800px;
+  color: white;
+  padding-top: 5em;
+  padding-left: 1.5em;
+  margin-bottom: 0;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+#learnmore {
+  background-image: url("gridme.png");
+  height: 30em;
+  border-top: 2px solid;
+  margin-top: 1em;
+}
+
+#maptitle {
+  margin-top: 0;
+  background-color:   #253494;
+  color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-bottom: solid 2px;
+}
+
+* {
+  margin: 0;
+}
+
+
+svg#map {
+  margin: 0 auto;
+  display: block;
+}
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -300px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 500px; /* .push must be the same height as .footer */
+    background-image: url('fabric2.jpg');
+      background-size: cover;
+      color: white;
+}
+
+#footertext {
+  padding-top: 400px;
+}
