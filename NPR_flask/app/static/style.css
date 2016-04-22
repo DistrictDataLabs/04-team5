@@ -1,25 +1,12 @@
-@import url('//fonts.googleapis.com/css?family=Open+Sans');
-<!-- @import url('//fonts.googleapis.com/css?family=Lustria:400,700,300');  -->
-<!-- @import url('//fonts.googleapis.com/css?family=Lato:400,700,300'); -->
+@import url('//fonts.googleapis.com/css?family=Ubuntu');
+
+
 
 :root {
   --reddish: #962D3E;
   --blueish: #348899;
   --whiteish: #F2EBC7;
   --grey: #ddd;
-}
-
-.counties {
-	fill: none;
-	stroke: black;
-	stroke-width:.2;
-}
-
-.states {
-	fill: none;
-	stroke: grey;
-	stroke-linejoin: round;	
-	stroke-width:1;
 }
 
 .select {
@@ -82,6 +69,5 @@ li.key {
 }
 
 a:link{
-
-    color:white;
+    color:darkgrey;
 }

@@ -16,9 +16,13 @@ def about():
 							title='About'
 							)
 
-@app.route('/vizualizations')
-def vizualizations():
-	return render_template('vizualizations.html',
-							title='Vizualizations'
+@app.route('/visualizations')
+def visualizations():
+	return render_template('visualizations.html',
+							title='Visualizations'
 							)
-
+@app.route('/methodology')
+def methodology():
+	return render_template('methodology.html',
+							title='Methodology'
+							)

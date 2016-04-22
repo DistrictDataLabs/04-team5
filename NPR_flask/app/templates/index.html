@@ -22,17 +22,20 @@
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="color: lightgrey">
 				<span class="sr-only" >Toggle navigation</span>
 				<span class="icon-bar"></span>
+
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 
 		</div>
+
 		<!-- Collect the nav links, forms, and other content for toggling -->
+
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
-				<li><a href="{{ url_for('about')}}">About</a></li>
-				<li><a href="{{ url_for('vizualizations')}}">Visualizations</a></li>
+				<li><a href="{{ url_for('methodology')}}">Methodology</a></li>
+				<li><a href="{{ url_for('visualizations')}}">Visualizations</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
@@ -44,7 +47,7 @@
 
 <div class="jumbotron">
   <h1>Visualizing the News</h1>
-  <p>NPR</p>
+  <h2>With NPR</h2>
 </div>
 
 
@@ -52,26 +55,30 @@
 <div class="container-fluid" id="learnmore">
 	<div class="row">
 		<div class="col-md-12 text-center">
-			<h2>Section Here</h2>
+			<h2>How is the news related?</h2>
 		</div>
 		<ul>
 			<div class="col-md-4 text-center" id="about">
 				<li>
-					<h3>About</h3>
+					<a href="{{ url_for('about')}}"><h3>About</h3></a>
+					<p>How is the news related? Are there themes and trends?</p>
 				</li>
 			</div>
 
+
 			<div class="col-md-4 text-center" id="methodology">
-				<li>
-					<h3>Section 2</h3>
+					<li><a href="{{ url_for('methodology')}}"><h3>Methodology</h3></a>
+					<p>How did we get the data and what types of analysis we conducted.</p>
 				</li>
 			</div>
 
 			<div class="col-md-4 text-center" id="visualizations">
 				<li>
-					<h3>Visualizations</h3>
+					<a href="{{ url_for('visualizations')}}"><h3>Visualizations</h3></a>
+					<p>The news in pictures.</p>
 				</li>
 			</div>
+
 		</ul>
 	</div>
 </div>
