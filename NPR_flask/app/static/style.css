@@ -50,12 +50,14 @@ svg#map{
 
 #links{
 	text-align: center;
+    color: white;
 }
 
 #navbar {
+    height: 70px;
+    text-align: middle;
+    color: lightgrey;
 
-  height: 70px;
-  text-align: middle;
 }
   --reddish: #962D3E;
   --blueish: #348899;
@@ -79,3 +81,7 @@ li.key {
     padding-right: 2em;
 }
 
+a:link{
+
+    color:white;
+}
