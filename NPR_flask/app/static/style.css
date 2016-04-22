@@ -1,5 +1,7 @@
-@import url('//fonts.googleapis.com/css?family=Lustria:400,700,300');
-@import url('//fonts.googleapis.com/css?family=Lato:400,700,300');
+@import url('//fonts.googleapis.com/css?family=Open+Sans');
+<!-- @import url('//fonts.googleapis.com/css?family=Lustria:400,700,300');  -->
+<!-- @import url('//fonts.googleapis.com/css?family=Lato:400,700,300'); -->
+
 :root {
   --reddish: #962D3E;
   --blueish: #348899;

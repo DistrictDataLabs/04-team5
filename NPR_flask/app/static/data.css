@@ -33,15 +33,15 @@ ul li {
 }
 
 #learnmore {
-  background-image: url("gridme.png");
+  background-color: burlywood;
   height: 30em;
   border-top: 2px solid;
-  margin-top: 1em;
+  margin-top: 0;
 }
 
 #maptitle {
   margin-top: 0;
-  background-color:   #253494;
+  background-color: #253494;
   color: white;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -61,22 +61,27 @@ svg#map {
 * {
     margin: 0;
 }
+
+
 html, body {
     height: 100%;
 }
+
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
     margin: 0 auto -300px; /* the bottom margin is the negative value of the footer's height */
 }
+
 .footer, .push {
-    height: 500px; /* .push must be the same height as .footer */
-    background-image: url('fabric2.jpg');
-      background-size: cover;
-      color: white;
+    height: 200px; /* .push must be the same height as .footer */
+    background-color:royalblue;
+    background-size: cover;
+    color: white;
 }
 
 #footertext {
-  padding-top: 400px;
+    padding-top: 0px ;
 }

@@ -31,6 +31,8 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
+				<li><a href="{{ url_for('about')}}">About</a></li>
+				<li><a href="{{ url_for('vizualizations')}}">Visualizations</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
@@ -39,11 +41,52 @@
 
 
 <body>
+
 <div class="jumbotron">
   <h1>Visualizing the News</h1>
   <p>NPR</p>
 </div>
+
+
+
+<div class="container-fluid" id="learnmore">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h2>Section Here</h2>
+		</div>
+		<ul>
+			<div class="col-md-4 text-center" id="about">
+				<li>
+					<h3>About</h3>
+				</li>
+			</div>
+
+			<div class="col-md-4 text-center" id="methodology">
+				<li>
+					<h3>Section 2</h3>
+				</li>
+			</div>
+
+			<div class="col-md-4 text-center" id="visualizations">
+				<li>
+					<h3>Visualizations</h3>
+				</li>
+			</div>
+		</ul>
+	</div>
+</div>
+
+
+<div class="footer">
+	<h4>Footer: 2016 - District Data Labs Incubator Team 6</h4>
+</div>
+
+
+
+
 </body>
+
+
 
 
 
