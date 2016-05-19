@@ -14,6 +14,17 @@
  --map5: #253494;
 
 }
+
+
+.blog {
+  height: 850px;
+  padding-top: 5em;
+  padding-left: 1.5em;
+  margin-bottom: 0;
+  color: white;
+}
+
+
 .jumbotron {
   background-image: url("blackback.jpg");
   background-size: cover;

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
+
+	<script src="{{url_for('static', filename='d3.min.js')}}"></script>
+	<script src="{{url_for('static', filename='queue.min.js')}}"></script>
+	<script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="data.css"/>
+	<link rel="stylesheet" type="text/css" href="footer.css"/>
+</head>
+
+
+<nav class="navbar navbar-default" style="margin: 0 auto; color: lightgrey ;background-color: black;">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="color: lightgrey">
+				<span class="sr-only" >Toggle navigation</span>
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
+				<li><a href="{{ url_for('methodology')}}">Methodology</a></li>
+				<li><a href="{{ url_for('visualizations')}}">Visualizations</a></li>
+                      <li><a href="{{ url_for('links')}}">Links</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+
+
+<body>
+
+
+<div class="blog">
+<!--Add LeeAnn's Links -->
+
+<h2 align="center">http://newsmap.jp/</h2>
+
+<p align="center">Newsmap organizes news stories - by popularity and volume of reporting - using a 
+treemap, making it easy and convenient to see what is going on around the world and how much coverage a certain topic is receiving.
+With Newsmap you can view news by category (i.e. World, National, Business, Technology, Sports, Entertainment, and Health) as well as by country (i.e. U.S., U.K.,
+Spain, Mexico, France, and etc.). You can combine countries and categories to filter the news content. For example, you can select technology news across several countries to
+view a weighted map of which news stories are popular in each country. Placing the cursor over a story shows a pop-up window with the summary and image
+and clicking on any article title directs you to the story. Registering for the website offers extra features like customization and article tracking such as hiding read articles,
+toggling previews, and tweaking the colors and font.</p>
+
+
+<p align="center">http://unfiltered.news/#/2016/05/14/us</p>
+
+<p align="center">Unfiltered News allows you to explore Google News data across all languages and locations to find popular and important global stories. You can see which locations
+report on similar topics, compare different perspectives on an issue, and track issue coverage over time. You are able to organize global news stories for different topics and count the number of times that a certain topic is mentioned each day, categorized by the location of the
+article mentioning that topic. Currently, you are able to view the top 100 topics for each location.
+The size of a word represents the number of times that a topic has been mentioned in
+the news within a given location. The size of a given circle is determined by the total
+number of topic mentions from publishers located in a given location, weighted by the
+population of that location. On the global view this count includes all topics. When a
+topic is selected, the circles represent the total number of times that a selected topic is covered.</p>
+
+
+<p align="center">http://www.newseum.org/todaysfrontpages/</p>
+
+<p align="center">Newseum holds a special agreement with more than 2,000 newspapers worldwide. Front Pages displays the front pages of these newspapers each day in their original,
+unedited form. The map feature allows the viewer to see which newspaper belongs to which area and which country around the globe. The user can also view the full list of all
+newspapers that Newseum is partnered with the list function.</p>
+
+
+<p align="center">http://casualdata.com/newsknitter/</p>
+
+<p align="center">Newsknitter converts information gathered from the daily political news into clothing. Live news feed from the Internet that is broadcasted within 24 hours or a particular
+given period is analyzed, filtered and converted into a unique visual pattern for a knitted
+sweater. The system consists of two different types of software: one receives the content from live feeds and the other converts it into visual patterns, and a fully
+computerized flat knitting machine produces the final output.</p>
+
+<p align="center">http://neoformix.com/spot/#/Twitter+Visualization</p>
+
+<p align="center">Spot is an interactive real-time Twitter visualization that uses a particle metaphor to
+represent tweets. The tween particles are called spots and get organized in various
+configurations to illustrate information about the topic of interest. In Spot, there is an
+entry field at the lower-left corner where you can type in a valid Twitter search query.
+The functionality gathers the latest 200 tweets and uses those for the visualization. At
+the top left, there are six icons to access different views for Spot.
+
+ Banner (speech icon) mode shows the top five groups of similar tweets.
+
+ Timeline (watch icon) mode places tweets along a timeline based on when they were sent
+
+ User (person icon) mode shows a bar chart with people sending the most tweets in the set
+
+ Word (word circle icon) mode directly shows word bubbles with tweets attracted
+
+to the words they contain
+
+ Source (megaphone icon) mode shows a bar chart displaying the tool used to
+
+send the tweets or news source
+
+ Group (circles in circle icon) mode places tweets that share common words inside large circles.
+</div>
+
+
+<div class="footer">
+	<h4>Footer: 2016 - District Data Labs Incubator Team 6</h4>
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+

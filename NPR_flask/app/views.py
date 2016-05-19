@@ -26,3 +26,10 @@ def methodology():
 	return render_template('methodology.html',
 							title='Methodology'
 							)
+@app.route('/links')
+def links():
+	return render_template('links.html',
+							title='Links'
+							)
+       
+       
