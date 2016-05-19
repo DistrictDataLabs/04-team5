@@ -17,11 +17,11 @@
 
 
 .blog {
-  height: 850px;
+  height: 1250px;
   padding-top: 5em;
   padding-left: 1.5em;
   margin-bottom: 0;
-  color: white;
+  color: black;
 }
 
 
@@ -46,6 +46,13 @@ ul li {
 #learnmore {
   background-color: whitesmoke;
   height: 30em;
+  border-top: 2px solid;
+  margin-top: 0;
+}
+
+#blog {
+  background-color: whitesmoke;
+  height: 1250px;
   border-top: 2px solid;
   margin-top: 0;
 }

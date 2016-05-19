@@ -47,42 +47,8 @@
 
 <body>
 
-<div class="jumbotron">
-  <h1>Visualizing the News</h1>
-  <h2>With NPR</h2>
-</div>
 
-<div class="container-fluid" id="learnmore">
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<h2>How is the news related?</h2>
-		</div>
-		<ul>
-			<div class="col-md-4 text-center" id="about">
-				<li>
-					<a href="{{ url_for('about')}}"><h3>About</h3></a>
-					<p><img src="{{url_for('static', filename='force.png')}}" style="height: 40px"></img></p>
-					<p>How is the news related? Are there themes and trends?</p>
-				</li>
-			</div>
-
-
-			<div class="col-md-4 text-center" id="methodology">
-					<li><a href="{{ url_for('methodology')}}"><h3>Methodology</h3></a>
-						<p><img src="{{url_for('static', filename='force.png')}}" style="height: 40px"></img></p>
-					<p>How did we get the data and what types of analysis we conducted.</p>
-				</li>
-			</div>
-
-			<div class="col-md-4 text-center" id="visualizations">
-				<li>
-					<a href="{{ url_for('visualizations')}}"><h3>Visualizations</h3><p><img src="{{url_for('static', filename='wordcloud.png')}}" style="height: 40px"></img></p></a>
-					<p>The news in pictures.</p>
-				</li>
-			</div>
-
-		</ul>
-	</div>
+<div class="container-fluid">
 </div>
 
 
