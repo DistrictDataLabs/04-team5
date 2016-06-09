@@ -1,8 +1,8 @@
 :root {
-  --reddish: #962D3E;
-  --blueish: #348899;
-  --whiteish: #F2EBC7;
-  --grey: #ddd;
+  --reddish: #943126;
+  --blueish: #3498DB;
+  --whiteish: #F8F9F9;
+  --grey: #A6ACAF;
   #21499F;
   #CA4433;
  #E9E2DF;
@@ -15,11 +15,19 @@
 
 }
 
+.bio{
+    padding: 50px;
+    text-align: justify;
+    text-indent: 0px;
+}
 
-.blog {
-  height: 1250px;
-  padding-top: 5em;
-  padding-left: 1.5em;
+/*these are classes*/
+
+.blog{
+  height: 4050px;
+  padding-top: 3em;
+  padding-left: 9em;
+  padding-right: 9em;
   margin-bottom: 0;
   color: black;
 }
@@ -31,7 +39,7 @@
   border: 2px solid black;
   background-repeat: no-repeat;
   overflow: hidden;
-  height: 650px;
+  height: 450px;
   color: white;
   padding-top: 5em;
   padding-left: 1.5em;
