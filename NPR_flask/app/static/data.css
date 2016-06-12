@@ -15,21 +15,27 @@
 
 }
 
+
+
+/*these are classes, put in class declaration*/
 .bio{
-    padding: 50px;
     text-align: justify;
     text-indent: 0px;
+    color: black;
+    font-family: Ubuntu;
 }
 
-/*these are classes*/
 
 .blog{
-  height: 4050px;
+  height: 3050px;
   padding-top: 3em;
   padding-left: 9em;
   padding-right: 9em;
   margin-bottom: 0;
-  color: black;
+  color: black; 
+  overflow: hidden;
+  font-family: Ubuntu;
+  text-align: justify;
 }
 
 
@@ -49,6 +55,7 @@
 ul li {
   list-style-type: none;
   display: inline;
+  font-family: Ubuntu;
 }
 
 #learnmore {
@@ -58,12 +65,6 @@ ul li {
   margin-top: 0;
 }
 
-#blog {
-  background-color: whitesmoke;
-  height: 1200px;
-  border-top: 2px solid;
-  margin-top: 0;
-}
 
 #maptitle {
   margin-top: 0;
@@ -102,7 +103,7 @@ html, body {
 }
 
 .footer, .push {
-    height: 200px; /* .push must be the same height as .footer */
+    height: 100px; /* .push must be the same height as .footer */
     background-color: darkgray;
     background-size: cover;
     color: white;
