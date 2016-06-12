@@ -1,41 +1,132 @@
 ,source,target
-0,Politics,Elections
-1,Politics,Politics
-2,Politics,U.S.
-3,Politics,Home Page Top Stories
-4,Elections,Politics
-5,Elections,U.S.
-6,Elections,Home Page Top Stories
-7,Politics,U.S.
-8,Politics,Home Page Top Stories
-9,U.S.,Home Page Top Stories
-10,Politics,Politics
-11,Politics,NPR Stories For Apple News
-12,Politics,Elections
-13,Politics,U.S.
-14,Politics,Home Page Top Stories
-15,Politics,NPR Stories For Apple News
-16,Politics,Elections
-17,Politics,U.S.
-18,Politics,Home Page Top Stories
-19,NPR Stories For Apple News,Elections
-20,NPR Stories For Apple News,U.S.
-21,NPR Stories For Apple News,Home Page Top Stories
-22,Elections,U.S.
-23,Elections,Home Page Top Stories
-24,U.S.,Home Page Top Stories
-25,Elections,Home Page Top Stories
-26,Elections,Politics
-27,Elections,NPR Stories For Apple News
-28,Elections,Elections
-29,Elections,U.S.
-30,Home Page Top Stories,Politics
-31,Home Page Top Stories,NPR Stories For Apple News
-32,Home Page Top Stories,Elections
-33,Home Page Top Stories,U.S.
-34,Politics,NPR Stories For Apple News
-35,Politics,Elections
-36,Politics,U.S.
-37,NPR Stories For Apple News,Elections
-38,NPR Stories For Apple News,U.S.
-39,Elections,U.S.
+0,News,Orlando
+1,News,America
+2,Orlando,America
+3,U.S.,Around the Nation
+4,U.S.,News
+5,Around the Nation,News
+6,Business,Around the Nation
+7,Business,U.S.
+8,Business,News
+9,Politics,News
+10,Politics,Elections
+11,Politics,Donald Trump
+12,Politics,America
+13,News,Elections
+14,News,Donald Trump
+15,Elections,Donald Trump
+16,Elections,America
+17,Donald Trump,America
+18,Africa,Global Health
+19,Africa,News
+20,Global Health,News
+21,Book Reviews,Books
+22,Book Reviews,Arts & Life
+23,Books,Arts & Life
+24,Politics,Around the Nation
+25,Politics,U.S.
+26,U.S.,Orlando
+27,U.S.,America
+28,Orlando,Around the Nation
+29,America,Around the Nation
+30,Arts & Life,Around the Nation
+31,Science,Music
+32,Science,Around the Nation
+33,Science,Books
+34,Science,Race
+35,Science,Arts & Life
+36,Science,U.S.
+37,Science,News
+38,Music,Around the Nation
+39,Music,Books
+40,Music,Race
+41,Music,Arts & Life
+42,Music,U.S.
+43,Music,News
+44,Around the Nation,Books
+45,Around the Nation,Race
+46,Books,Race
+47,Books,U.S.
+48,Books,News
+49,Race,Arts & Life
+50,Race,U.S.
+51,Race,News
+52,Arts & Life,U.S.
+53,Arts & Life,News
+54,America,Business
+55,Environment,News
+56,Environment,America
+57,Environment,Around the Nation
+58,Environment,U.S.
+59,Orlando,Music
+60,World,International
+61,World,Race
+62,World,Politics
+63,World,U.S.
+64,World,News
+65,International,Race
+66,International,Politics
+67,International,U.S.
+68,International,News
+69,Race,Politics
+70,World,Middle East
+71,News,Middle East
+72,International,Middle East
+73,Games & Humor,Arts & Life
+74,Author Interviews,Fiction
+75,Author Interviews,Books
+76,Author Interviews,Arts & Life
+77,Fiction,Books
+78,Fiction,Arts & Life
+79,Health,Medical Treatments
+80,Health,Around the Nation
+81,Health,Health Care
+82,Health,U.S.
+83,Health,News
+84,Medical Treatments,Around the Nation
+85,Medical Treatments,Health Care
+86,Medical Treatments,U.S.
+87,Medical Treatments,News
+88,Around the Nation,Health Care
+89,Health Care,U.S.
+90,Health Care,News
+91,Book Reviews,Fiction
+92,Race,Remembrances
+93,Race,Sports
+94,Remembrances,Sports
+95,Remembrances,U.S.
+96,Remembrances,News
+97,Sports,U.S.
+98,Sports,News
+99,U.S.,Law
+100,America,Law
+101,America,Science
+102,Around the Nation,Law
+103,Law,Environment
+104,Law,Science
+105,Law,Business
+106,Law,News
+107,Environment,Science
+108,Environment,Business
+109,Science,Business
+110,Sports,International
+111,Global Health,Health
+112,Global Health,World
+113,Health,World
+114,Elections,U.S.
+115,Donald Trump,U.S.
+116,Remembrances,America
+117,America,Sports
+118,Sports,Around the Nation
+119,Sports,Business
+120,Health,Business
+121,Health Care,Business
+122,Medical Treatments,Business
+123,Environment,International
+124,Environment,World
+125,America,International
+126,America,World
+127,International,Science
+128,Science,World
+129,World,Business
+130,International,Business
