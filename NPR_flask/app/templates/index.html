@@ -4,12 +4,15 @@
 
 <head>
 	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
-	<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
 
-	<script src="{{url_for('static', filename='d3.min.js')}}"></script>
-	<script src="{{url_for('static', filename='queue.min.js')}}"></script>
-	<script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='d3.min.js')}}"></script>
+    <script src="{{url_for('static', filename='queue.min.js')}}"></script>
+    <script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
+  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" type="text/css" href="data.css"/>
@@ -17,30 +20,43 @@
 </head>
 
 
-<nav class="navbar-collase navbar-fixed-top" style="margin: 0 auto; color: black ;background-color: black;">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
-		<div class="">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="color: lightgrey">
-				<span class="sr-only" >Toggle navigation</span>
-				<span class="icon-bar"></span>
 
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
 
-		</div>
+            <!--Logo -->
+            <div class="navbar-header"> 
+                <a href="{{ url_for('index')}}" class="navbar-brand">vizbuzz</a>
+            </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Button -->
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="color: lightgrey">
+                    <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
 
-		<div class="navbar-fixed-top" id="nav">
-			<ul class="nav navbar-nav">
+		<!-- Menu Items -->
+
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-left">
 				<li class="active"><a href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
-				<li><a href="{{ url_for('about')}}">About</a></li>
-				<li><a href="{{ url_for('methodology')}}">Methodology</a></li>
+
+				<li class= "dropdown"><a href="#" class = "dropdown-button" data-toggle = "dropdown">Learn How <b class = "caret"></b></a>
+                                <ul class = "dropdown-menu">
+                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API & Data Cleaning</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Visualizations</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='web')}}">Web Hosting</a></li>
+                                </ul>
+                          </li>
+
 				<li><a href="{{ url_for('visualizations')}}">Visualizations</a></li>
                       <li><a href="{{ url_for('links')}}">Links</a></li>
+			<li><a href="{{ url_for('about')}}">About</a></li>
 			</ul>
-		</div><!-- /.navbar-collapse -->
+		</div><!-- /.navbar- -->
+
 	</div><!-- /.container-fluid -->
 </nav>
 
@@ -49,46 +65,98 @@
 <body>
 
 <div class="jumbotron">
-  <h1>Learning to Visualize the News</h1>
-  <h2>Resources : Code Samples : Links</h2>
+  <h1>Learn How to Visualize the News</h1>
+   <hr>
+  <h2>Code Samples : Visualizations : Resources : Links</h2>
 </div>
 
-<div class="container-fluid" id="learnmore">
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<h2>How to analyze the news?</h2>
-		</div>
-		<ul>
-			<div class="col-md-4 text-center" id="methodology">
-					<li><a href="{{ url_for('methodology')}}"><h3>Methodology</h3></a>
-						<p><img src="{{url_for('static', filename='method.png')}}" style="height: 100px"></img></p>
-					<p>How did we get the data and what types of analysis we conducted.</p>
-				</li>
+<div class="bio container-fluid" id="learnmore">
+
+        <div class="col-md-12 text-center">
+
+            <h2>How do I analyze the news?</h2>
+
+            <div class="col-md-12 text-center">
+                <div class="col-md-2 text-center"></div>
+        
+                <div class="col-md-8 text-center">
+                <p>Today, there is a wealth of available and accessible information. Do you want to learn how to harness this information and create stories and visualizations? If you are a beginner, this may seem challenging. This site guides you from downloading APIs, data cleaning, creating visualizations, and finally how to host your work on the web. Our examples center on the NPR API, though there are many open data sources out there!</p>
+                </div>
+        
+                <div class="col-md-2 text-center"></div>
+            </div>
+    
+
+        </div>
+        
+	        
+        <!--Center buttons -->
+        <div class="col-md-12 text-center">
+	  <hr>	
+                    <div class="col-md-4 text-center">
+        			<p><img src="{{url_for('static', filename='method.png')}}" style="height: 100px"></img></p>
+                            <a href="{{ url_for('methodology')}}"><h3>Learn How</h3></a>
+				
+        			<p>How did we get the data and what types of analysis we conducted.</p>
 			</div>
 
-			<div class="col-md-4 text-center" id="visualizations">
-				<li>
-					<a href="{{ url_for('visualizations')}}"><h3>Visualizations</h3><p><img src="{{url_for('static', filename='viz.png')}}" style="height: 100px"></img></p></a>
-					<p>The news in pictures.</p>
-				</li>
+
+			<div class="col-md-4 text-center">
+                          <p><img src="{{url_for('static', filename='viz.png')}}" style="height: 100px"></img></p>
+				<a href="{{ url_for('visualizations')}}"><h3>Visualizations</h3></a>
+
+				<p>The news in pictures.</p>
 			</div>
 
-			<div class="col-md-4 text-center" id="about">
-				<li>
-					<a href="{{ url_for('about')}}"><h3>About the Team</h3></a>
-					<p><img src="{{url_for('static', filename='team.png')}}" style="height: 100px"></img></p>
-					<p>Who are the team?</p>
-				</li>
+
+			<div class="col-md-4 text-center">
+ 				<p><img src="{{url_for('static', filename='team.png')}}" style="height: 100px"></img></p>
+       			<a href="{{ url_for('about')}}"><h3>About the Team</h3></a>
+
+				<p>Who are the team?</p>
+    			</div>
+        </div>
+
+        <!--Check out today's news-->
+        <div class="col-md-12 text-center">
+            <br><br><br><hr>
+            <h2>Today's news</h2>
+        </div>
+
+        <!--embed news pages-->   
+        <div class="col-md-12 text-center">
+	  <hr>	
+                <div class="col-md-3 text-center">
+			<object data="http://www.cnn.com" width"”650" height="500"> <embed src=http://www.cnn.com width="650" height="500"> </embed></object>
+                </div>
+
+
+			<div class="col-md-3 text-center">
+                <object data="http://www.bbc.com" width"”650" height="500"> <embed src=http://www.bbc.com width="650" height="500"> </embed></object>
 			</div>
 
-		</ul>
-	</div>
+
+			<div class="col-md-3 text-center">
+    			<object data="http://www.npr.org" width"”650" height="500"> <embed src=http://www.npr.org width="650" height="500"> </embed></object>
+                </div>
+
+			<div class="col-md-3 text-center">
+    			<object data="http://www.ap.org" width"”650" height="500"> <embed src=http://www.ap.org width="650" height="500"> </embed></object>
+                </div>
+        </div>
+
+        <!--Contact Us-->
+        <div class="col-md-12 text-center">
+            <br><br><br><hr>
+            <h3>Let us know how you liked the site, we'd love to hear from you!</h3>
+        </div>
+
 </div>
 
 
-<div class="footer">
-	<h4>Footer: 2016 - District Data Labs Incubator Team 6</h4>
-</div>
+<!--Footer-->
+
+<div class="footer"><h4>2016 - <a href="https://districtdatalabs.silvrback.com/">District Data Labs</a> Incubator Team 6</h4></div>
 
 
 

@@ -8,7 +8,7 @@ html, body {
     margin: 0 auto -300px; /* the bottom margin is the negative value of the footer's height */
 }
 .footer, .push {
-    height: 500px; /* .push must be the same height as .footer */
+    height: 200px; /* .push must be the same height as .footer */
     background-image: url('fabric2.jpg');
       background-size: cover;
       color: white;

@@ -3,12 +3,15 @@
 
 <head>
 	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
-	<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
 
-	<script src="{{url_for('static', filename='d3.min.js')}}"></script>
-	<script src="{{url_for('static', filename='queue.min.js')}}"></script>
-	<script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='d3.min.js')}}"></script>
+    <script src="{{url_for('static', filename='queue.min.js')}}"></script>
+    <script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
+  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" type="text/css" href="data.css"/>
@@ -16,30 +19,44 @@
 </head>
 
 
-<nav class="navbar-fixed-top" style="margin: 0 auto; color: lightgrey ;background-color: black;">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="color: lightgrey">
-				<span class="sr-only" >Toggle navigation</span>
-				<span class="icon-bar"></span>
 
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
 
-		</div>
+            <!--Logo -->
+            <div class="navbar-header"> 
+                <a href="{{ url_for('index')}}" class="navbar-brand">vizbuzz</a>
+            </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Button -->
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="color: lightgrey">
+			<span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
 
-		<div class="navbar-fixed-top" id="nav">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
-				<li><a href="{{ url_for('about')}}">About</a></li>
-				<li><a href="{{ url_for('methodology')}}">Methodology</a></li>
+		<!-- Menu Items -->
+
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li><a href="{{ url_for('index')}}">Home<span class="sr-only">(current)</span></a></li>
+
+				<li class= "dropdown"><a href="#" class = "dropdown-button" data-toggle = "dropdown">Learn How  <b class = "caret"></b></a>
+                                <ul class = "dropdown-menu">
+                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API & Data Cleaning</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Visualizations</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='web')}}">Web Hosting</a></li>
+                                </ul>
+                          </li>
+
 				<li><a href="{{ url_for('visualizations')}}">Visualizations</a></li>
                       <li><a href="{{ url_for('links')}}">Links</a></li>
+				<li class="active"><a href="{{ url_for('about')}}">About</a></li>
 			</ul>
-		</div><!-- /.navbar-collapse -->
+		</div><!-- /.navbar- -->
+
 	</div><!-- /.container-fluid -->
 </nav>
 
@@ -54,63 +71,66 @@
 <div class="bio container-fluid">
     <div class="col-md-4 text-center">
     <br>
-    <p>Andrew</p>
     <p><img src="{{url_for('static', filename='andrew.png')}}" style="height: 160px"</img></p>
-    <p><a href="http://www.linkedin.com/in/andrewclough">LinkedIn<span class="sr-only"></a></p>
-    <p></p>
-    <p>bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio</p>
+    <p>Andrew</p>
+    <p><a href="http://www.linkedin.com/in/andrewclough" target="_blank">LinkedIn<span class="sr-only"></a></p>
+    <br><br>
+    <p>bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio.</p>
     <br>
     </div>
     
 
     <div class="col-md-4 text-center">
     <br>
-    <p>Judy</p>
     <p><img src="{{url_for('static', filename='blue.png')}}" style="height: 160px"</img></p>
+    <p>Judy</p>
     <p><a href="https://twitter.com/judysyang" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @judysyang</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
-    <p><a href="http://sites.google.com/site/judysyang">Personal Site<span class="sr-only"></a></p>
-    <p>Judy is an Economist in the World Bank's Poverty & Equity group. My interests include migration, the business environment, household welfare, access to finance, and data science.</p>
+    <p><a href="http://sites.google.com/site/judysyang" target="_blank">Personal Site<span class="sr-only"></a></p>
+    <p>Judy is an Economist for the World Bank's Poverty & Equity Global Practice. She is a member of the Global Poverty Working Group, Data 4 Goals, and serves the East Asia and Pacific region. Her research interests include migration, the business environment, household welfare, access to finance, and data science.</p>
     </div>
   
 
     <div class="col-md-4 text-center">
     <br>
-    <p>Kate</p>
+
     <p><img src="{{url_for('static', filename='kate.png')}}" style="height: 160px"</img></p>
+    <p>Kate</p>
     <p><a href="https://twitter.com/kate_riesbeck" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @kate_riesbeck</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
-    <p><a href="http://www.linkedin.com/in/kriesbeck">LinkedIn<span class="sr-only"></a></p>
+    <p><a href="http://www.linkedin.com/in/kriesbeck" target="_blank">LinkedIn<span class="sr-only"></a></p>
     <p>Kate specializes in data management and analytics for nonprofit organizations. She is currently a Senior Business Systems Analyst at Euclid Technology where she manages database software implementations. Previously, she led NPR's fundraising data and analytics team. Her interests include open data, predictive analytics, and data-driven storytelling.</p>
     </div>
-
 </div>
 
 <div class="bio container-fluid">
+<hr>
   <div class="col-md-2 text-center"></div>
 
     <div class="col-md-4 text-center">    
     <br>
-    <p>Leeann</p>
     <p><img src="{{url_for('static', filename='leeann.png')}}" style="height: 160px"</img></p>
-    <p><a href="http://www.linkedin.com/in/leeannchoi">LinkedIn<span class="sr-only"></a></p>
+    <p>Leeann</p>
+    <p><a href="http://www.linkedin.com/in/leeannchoi" target="_blank">LinkedIn<span class="sr-only"></a></p>
+    <br><br>
     <p>Leeann is currently a Consumer Insights & Analytics Intern at QVC Studio Park. She attends the University of Maryland - Robert H. Smith School of Business finishing up her Master’s degree in Information Systems. She recently obtained her Bachelor’s degree in Economics and Statistics from Carnegie Mellon University. Post graduation, Leeann plans to pursue her career in data science and analytics.</p>    
     </div>
 
 
     <div class="col-md-4 text-center">    
     <br>
-    <p>Lizzie</p>
     <p><img src="{{url_for('static', filename='lizzie.png')}}" style="height: 160px"</img></p>
+    <p>Lizzie</p>
     <p><a href="https://twitter.com/lizmeister321" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @lizmeister321</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
-    <p><a href="http://www.linkedin.com/in/elliselizabeth">LinkedIn<span class="sr-only"></a></p>
-    <p>bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio.</p>
+    <p><a href="http://www.linkedin.com/in/elliselizabeth" target="_blank">LinkedIn<span class="sr-only"></a></p>
+    <p>bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio.</p>
     </div>
 
     <div class="col-md-2 text-center"></div>
 </div>
 
-<div class="footer">
-	<h4>Footer: 2016 - District Data Labs Incubator Team 6</h4>
-</div>
+<!--Footer-->
+
+<div class="footer"><h4>2016 - <a href="https://districtdatalabs.silvrback.com/">District Data Labs</a> Incubator Team 6</h4></div>
+
 
 
 
