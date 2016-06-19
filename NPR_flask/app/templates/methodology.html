@@ -2,16 +2,14 @@
 <meta charset="utf-8">
 
 <head>
-	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
-	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="tooltip.css"/>
 
     <script src="{{url_for('static', filename='d3.min.js')}}"></script>
-    <script src="{{url_for('static', filename='queue.min.js')}}"></script>
-    <script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
-  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
 
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" type="text/css" href="data.css"/>
@@ -45,9 +43,10 @@
 
 				<li class= "dropdown"><a href="#" class = "dropdown-button active" data-toggle = "dropdown">Learn How <b class = "caret"></b></a>
                                 <ul class = "dropdown-menu">
-                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API & Data Cleaning</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Visualizations</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='web')}}">Web Hosting</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Analysis</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='viz_make')}}">Visualization</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='hosting')}}">Hosting</a></li>
                                 </ul>
                           </li>
 
@@ -67,11 +66,11 @@
 
 <div class="learnhow">
 
-<br><br><h1>Learn how</h1>
-
+<h1 align="center">Learn how</h1>
+<h4 align="center">This page covers steps from ingesting data, cleaning, assembing, visualizing, to hosting your output on the web. For each step, we provide links to code samples on our Github as well as other useful resource links.</h4>
 <!---------------- API ---------------->
 <div id="API">
-<hr><h1><align="center"><font color=#2E86C1>API</font></h1>
+<hr><h1><font color=#2E86C1>API</font></h1>
 <!------------------------------------->
 
 
@@ -83,6 +82,19 @@
 <li><a href="https://www.codecademy.com/ru/tracks/npr" target="_blank">Codecademy NPR API</a></li>
 <li><a href="http://www.npr.org/api/outputReference.php" target="_blank">NPR API Reference</a></li>
 
+<h4>Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">NPR API code sample (python)</a></li>
+
+
+<br>
+</div>
+
+<!---------------- Analysis ---------------->
+<div id="analysis">
+<hr><h1><align="center"><font color=#2E86C1>Analysis</font></h1>
+<!------------------------------------->
+
+
 <h3><br><br>How to clean text, get API into panda data frame</h3>
 
 <p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
@@ -90,16 +102,12 @@
 <h4>Resource Links:</h4>
 <li><a href="http://pandas.pydata.org/pandas-docs/version/0.18.1/tutorials.html" target="_blank">Panda Tutorials</a></li>
 <li><a href="http://pandas.pydata.org/pandas-docs/stable/text.html" target="_blank">Working with Text Data</a></li>
+<li><a href="http://www.analyticsvidhya.com/blog/2014/11/text-data-cleaning-steps-python/" target="_blank">Steps for effective text data cleaning (with case study using Python)</a></li>
 
-<br><br><br>
-</div>
-<!---------------- Analysis & Visualization ---------------->
-<div id="analysis">
-<hr><h1><align="center"><font color=#2E86C1>Analysis & Visualization</font></h1>
-<!---------------------------------------------------------->
+<h4>Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">NPR API json sample</a></li>
 
-
-<h3><br><br>How to do text analysis to prepare for D3 files</h3>
+<h3><br><br>How to do elementary text analysis</h3>
 
 <p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
 
@@ -109,8 +117,24 @@
 <li><a href="https://de.dariah.eu/tatom/working_with_text.html" target="_blank">Working with Text</a></li>
 
 
+<br>
+</div>
 
-<h3><br><br>How to make a word cloud</h3>
+<!---------------- Visualization ---------------->
+<div id="viz_make">
+<hr><h1><align="center"><font color=#2E86C1>Visualization</font></h1>
+<!---------------------------------------------------------->
+
+<h3><br><br>Document Term Frquency Matrix</h3>
+
+<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+
+<h4>Resource Links:</h4>
+
+<h4>Samples:</h4>
+
+
+<h3><br><br>World Clouds</h3>
 
 <p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
 
@@ -118,8 +142,20 @@
 <li><a href="https://github.com/amueller/word_cloud" target="_blank">Word Cloud in Python</a></li>
 <li><a href="http://sebastianraschka.com/Articles/2014_twitter_wordcloud.html" target="_blank">Twitter to Word Cloud</a></li>
 
+<h4>Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">Word cloud using NPR API</a></li>
 
-<h3><br><br>How to make D3</h3>
+<h3><br><br>Network Graphs</h3>
+
+<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+
+<h4>Resource Links:</h4>
+<li><a href="https://networkx.github.io/" target="_blank">Python networkx library</a></li>
+
+<h4>Samples:</h4>
+
+
+<h3><br><br>D3</h3>
 
 <p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
 
@@ -131,29 +167,33 @@
 <li><a href="http://bl.ocks.org/d3noob/5141278" target="_blank">Basic Directional Force Layout</a></li>
 <li><a href="http://bl.ocks.org/ccmcc/5182685" target="_blank">D3 Force Diagram with CSV</a></li>
 
+<h4>Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">D3 using NPR API</a></li>
 
-
-<br><br><br>
+<br>
 </div>
 <!---------------- Web Hosting ---------------->
-<div id="web">
-<hr><h1><align="center"><font color=#2E86C1>Web Hosting</font></h1>
+<div id="hosting">
+<hr><h1><align="center"><font color=#2E86C1>Hosting</font></h1>
 <!--------------------------------------------->
 
 
 <h3><br><br>What is bootstrap</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
-
+<p>Bootstrap is a font-end framework used to create websites and applications. A collection of html, css, and javascript tools eases web design.</p>
 <h4>Resource Links:</h4>
-<li><a href="http://getbootstrap.com/components/" target="_blank">Bootstrapping</a></li>
-<li><a href="http://getbootstrap.com/getting-started/" target="_blank">Get Bootstrap</a></li>
+<li><a href="http://getbootstrap.com/getting-started/" target="_blank">Get Bootstrap: Getting Started</a></li>
+<li><a href="http://www.w3schools.com/bootstrap/bootstrap_get_started.asp" target="_blank">w3schools.com Bootstrapping</a></li>
+<li><a href="http://startbootstrap.com/bootstrap-resources/" target="_blank">Start Bootstrap</a></li>
+<li><a href="https://almsaeedstudio.com/blog/10-Free-Responsive-Bootstrap-Templates-For-2016" target="_blank">Free Bootstrap templates</a></li>
+
+<h4>Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">Vizbuzz homepage bootstrap template</a></li>
 
 
 <h3><br><br>What is Flask</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
-
+<p>Flask is a web framework written in Python. Companies such as LinkedIn and Pinterest use Flask.</p>
 <h4>Resource Links:</h4>
 <li><a href="https://realpython.com/blog/python/flask-by-example-part-1-project-setup/" target="_blank">Flask by Example</a></li>
 <li><a href="https://www.youtube.com/watch?v=nw9oGzZi8Hk" target="_blank">Flask YouTube Tutorial</a></li>
@@ -173,6 +213,7 @@
 <li><a href="https://www.codeschool.com/screencasts/heroku" target="_blank">Code School</a></li>
 
 </div>
+<br>
 </div>
 
 

@@ -2,16 +2,14 @@
 <meta charset="utf-8">
 
 <head>
-	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
-	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="tooltip.css"/>
 
     <script src="{{url_for('static', filename='d3.min.js')}}"></script>
-    <script src="{{url_for('static', filename='queue.min.js')}}"></script>
-    <script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
-  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
 
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" type="text/css" href="data.css"/>
@@ -45,9 +43,10 @@
 
 				<li class= "dropdown"><a href="#" class = "dropdown-button" data-toggle = "dropdown">Learn How  <b class = "caret"></b></a>
                                 <ul class = "dropdown-menu">
-                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API & Data Cleaning</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Visualizations</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='web')}}">Web Hosting</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Analysis</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='viz_make')}}">Visualization</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='hosting')}}">Hosting</a></li>
                                 </ul>
                           </li>
 
@@ -71,7 +70,7 @@
 <div class="bio container-fluid">
     <div class="col-md-4 text-center">
     <br>
-    <p><img src="{{url_for('static', filename='andrew.png')}}" style="height: 160px"</img></p>
+    <p><img src="{{url_for('static', filename='andrew.png')}}" style="height: 180px"</img></p>
     <p>Andrew</p>
     <p><a href="http://www.linkedin.com/in/andrewclough" target="_blank">LinkedIn<span class="sr-only"></a></p>
     <br><br>
@@ -82,7 +81,7 @@
 
     <div class="col-md-4 text-center">
     <br>
-    <p><img src="{{url_for('static', filename='blue.png')}}" style="height: 160px"</img></p>
+    <p><img src="{{url_for('static', filename='judy.png')}}" style="height: 180px"</img></p>
     <p>Judy</p>
     <p><a href="https://twitter.com/judysyang" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @judysyang</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
     <p><a href="http://sites.google.com/site/judysyang" target="_blank">Personal Site<span class="sr-only"></a></p>
@@ -93,7 +92,7 @@
     <div class="col-md-4 text-center">
     <br>
 
-    <p><img src="{{url_for('static', filename='kate.png')}}" style="height: 160px"</img></p>
+    <p><img src="{{url_for('static', filename='kate.png')}}" style="height: 180px"</img></p>
     <p>Kate</p>
     <p><a href="https://twitter.com/kate_riesbeck" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @kate_riesbeck</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
     <p><a href="http://www.linkedin.com/in/kriesbeck" target="_blank">LinkedIn<span class="sr-only"></a></p>
@@ -107,7 +106,7 @@
 
     <div class="col-md-4 text-center">    
     <br>
-    <p><img src="{{url_for('static', filename='leeann.png')}}" style="height: 160px"</img></p>
+    <p><img src="{{url_for('static', filename='leeann.png')}}" style="height: 180px"</img></p>
     <p>Leeann</p>
     <p><a href="http://www.linkedin.com/in/leeannchoi" target="_blank">LinkedIn<span class="sr-only"></a></p>
     <br><br>
@@ -117,7 +116,7 @@
 
     <div class="col-md-4 text-center">    
     <br>
-    <p><img src="{{url_for('static', filename='lizzie.png')}}" style="height: 160px"</img></p>
+    <p><img src="{{url_for('static', filename='lizzie.png')}}" style="height: 180px"</img></p>
     <p>Lizzie</p>
     <p><a href="https://twitter.com/lizmeister321" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @lizmeister321</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
     <p><a href="http://www.linkedin.com/in/elliselizabeth" target="_blank">LinkedIn<span class="sr-only"></a></p>

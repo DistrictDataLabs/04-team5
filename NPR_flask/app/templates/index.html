@@ -3,16 +3,14 @@
 <meta charset="utf-8">
 
 <head>
-	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
-	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="tooltip.css"/>
 
     <script src="{{url_for('static', filename='d3.min.js')}}"></script>
-    <script src="{{url_for('static', filename='queue.min.js')}}"></script>
-    <script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
-  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
 
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" type="text/css" href="data.css"/>
@@ -45,9 +43,10 @@
 
 				<li class= "dropdown"><a href="#" class = "dropdown-button" data-toggle = "dropdown">Learn How <b class = "caret"></b></a>
                                 <ul class = "dropdown-menu">
-                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API & Data Cleaning</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Visualizations</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='web')}}">Web Hosting</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Analysis</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='viz_make')}}">Visualization</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='hosting')}}">Hosting</a></li>
                                 </ul>
                           </li>
 
@@ -93,15 +92,15 @@
         <!--Center buttons -->
         <div class="col-md-12 text-center">
 	  <hr>	
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-3 text-center">
         			<p><img src="{{url_for('static', filename='method.png')}}" style="height: 100px"></img></p>
                             <a href="{{ url_for('methodology')}}"><h3>Learn How</h3></a>
 				
-        			<p>How did we get the data and what types of analysis we conducted.</p>
+        			<p>Resources and code samples for using the NPR API, Analysis, making Visualization, and learning about web Hosting.</p>
 			</div>
 
 
-			<div class="col-md-4 text-center">
+			<div class="col-md-3 text-center">
                           <p><img src="{{url_for('static', filename='viz.png')}}" style="height: 100px"></img></p>
 				<a href="{{ url_for('visualizations')}}"><h3>Visualizations</h3></a>
 
@@ -109,12 +108,21 @@
 			</div>
 
 
-			<div class="col-md-4 text-center">
+			<div class="col-md-3 text-center">
  				<p><img src="{{url_for('static', filename='team.png')}}" style="height: 100px"></img></p>
        			<a href="{{ url_for('about')}}"><h3>About the Team</h3></a>
 
-				<p>Who are the team?</p>
+				<p>Meet the team.</p>
     			</div>
+
+			<div class="col-md-3 text-center">
+ 				<p><img src="{{url_for('static', filename='vizbuzz.png')}}" style="height: 100px"></img></p>
+       			<a href="https://github.com/vizbuzz" target="_blank"><h3>Our Github</h3></a>
+
+				<p>Download code and data samples.</p>
+    			</div>
+
+
         </div>
 
         <!--Check out today's news-->
@@ -126,23 +134,22 @@
         <!--embed news pages-->   
         <div class="col-md-12 text-center">
 	  <hr>	
-                <div class="col-md-3 text-center">
-			<object data="http://www.cnn.com" width"”650" height="500"> <embed src=http://www.cnn.com width="650" height="500"> </embed></object>
-                </div>
+                <div class="col-md-4 text-center">
+                    <a class="embedly-card" href="http://www.cnn.com">CNN - Breaking News, Latest News and Videos</a>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+               </div>
 
 
-			<div class="col-md-3 text-center">
-                <object data="http://www.bbc.com" width"”650" height="500"> <embed src=http://www.bbc.com width="650" height="500"> </embed></object>
+			<div class="col-md-4 text-center">
+                    <a class="embedly-card" href="http://www.npr.org">Home Page Top Stories</a>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 			</div>
 
 
-			<div class="col-md-3 text-center">
-    			<object data="http://www.npr.org" width"”650" height="500"> <embed src=http://www.npr.org width="650" height="500"> </embed></object>
-                </div>
-
-			<div class="col-md-3 text-center">
-    			<object data="http://www.ap.org" width"”650" height="500"> <embed src=http://www.ap.org width="650" height="500"> </embed></object>
-                </div>
+			<div class="col-md-4 text-center">
+                    <a class="embedly-card" href="http://www.ap.org">Associated Press</a>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+               </div>
         </div>
 
         <!--Contact Us-->

@@ -2,16 +2,14 @@
 <meta charset="utf-8">
 
 <head>
-	<link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
-	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="tooltip.css"/>
 
     <script src="{{url_for('static', filename='d3.min.js')}}"></script>
-    <script src="{{url_for('static', filename='queue.min.js')}}"></script>
-    <script src="{{url_for('static', filename='topojson.v1.min.js')}}"></script>
-  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
 
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" type="text/css" href="data.css"/>
@@ -44,9 +42,10 @@
 	
 				<li class= "dropdown"><a href="#" class = "dropdown-button" data-toggle = "dropdown">Learn How <b class = "caret"></b></a>
                                 <ul class = "dropdown-menu">
-                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API & Data Cleaning</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Visualizations</a></li>
-                                    <li><a href="{{ url_for('methodology', _anchor='web')}}">Web Hosting</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='API')}}">API</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='analysis')}}">Analysis</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='viz_make')}}">Visualization</a></li>
+                                    <li><a href="{{ url_for('methodology', _anchor='hosting')}}">Hosting</a></li>
                                 </ul>
                           </li>
 
@@ -64,10 +63,18 @@
 
 
 <div class="blog">
-    <h2>How are others visualizing the news?</h2><hr>
+<h1  align="center"><font color=#2E86C1>How are others visualizing the news?</font></h1>
+<h3  align="center">Get Inspired</h3>
+
     <br><br>
 
-        <h4 align="center"><a href="http://newsmap.jp" target="_blank">News Map</a></h4>
+         <h4 align="center"><a href="http://lisacharlotterost.de/" target="_blank">Lisa Charlotte Rost</a></h4>
+                        
+                        <p align="center">Lisa creates pretty mean data visualisations. She is an OpenNews fellow at the NPR Visuals Team. Visit her page for inspiration!</p>
+                        
+                        <br>
+
+       <h4 align="center"><a href="http://newsmap.jp" target="_blank">News Map</a></h4>
                         
                         <p align="center">Newsmap organizes news stories - by popularity and volume of reporting - using a 
                         treemap, making it easy and convenient to see what is going on around the world and how much coverage a certain topic is receiving.
@@ -115,12 +122,12 @@
                         the top left, there are six icons to access different views for Spot.</p>
                         
                         
-                            <li>Banner (speech icon) mode shows the top five groups of similar tweets.</li>
-                            <li>Timeline (watch icon) mode places tweets along a timeline based on when they were sent</li>
-                            <li>User (person icon) mode shows a bar chart with people sending the most tweets in the set</li>
-                            <li>Word (word circle icon) mode directly shows word bubbles with tweets attracted to the words they contain</li>
-                            <li>Source (megaphone icon) mode shows a bar chart displaying the tool used to send the tweets or news source</li>
-                            <li>Group (circles in circle icon) mode places tweets that share common words inside large circles.</li>
+                            <li align="center">Banner (speech icon) mode shows the top five groups of similar tweets.</li>
+                            <li align="center">Timeline (watch icon) mode places tweets along a timeline based on when they were sent</li>
+                            <li align="center">User (person icon) mode shows a bar chart with people sending the most tweets in the set</li>
+                            <li align="center">Word (word circle icon) mode directly shows word bubbles with tweets attracted to the words they contain</li>
+                            <li align="center">Source (megaphone icon) mode shows a bar chart displaying the tool used to send the tweets or news source</li>
+                            <li align="center">Group (circles in circle icon) mode places tweets that share common words inside large circles.</li>
                         
                         
 </div>

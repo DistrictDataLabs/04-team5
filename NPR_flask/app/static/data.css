@@ -29,13 +29,13 @@
 
 .blog{
   padding-top: 3em;
-  padding-left: 12em;
-  padding-right: 12em;
-  margin-bottom: 10px;
+  padding-left: 15em;
+  padding-right: 15em;
+  margin-bottom: 10em;
   color: black; 
   font-family: Ubuntu;
   text-align: justify;
-   background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .learnhow{
@@ -91,8 +91,21 @@ svg#map {
 }
 
 
+h1{
+    padding-top: 30px;
+}
+
 html, body {
     height: 100%;
+    padding-top: 25px;
+}
+
+h4{
+    padding-top: 15px;
+}
+
+#API {
+    padding-top: 60px;
 }
 
 
