@@ -31,5 +31,9 @@ def links():
 	return render_template('links.html',
 							title='Links'
 							)
-       
-       
+
+@app.route('/d31')
+def d31():
+	return render_template('d31.html',
+							title='d31'
+							)
