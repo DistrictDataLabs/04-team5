@@ -37,3 +37,9 @@ def d31():
 	return render_template('d31.html',
 							title='d31'
 							)
+       
+@app.route('/d32')
+def d32():
+	return render_template('d32.html',
+							title='d32'
+							)       

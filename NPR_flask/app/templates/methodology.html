@@ -91,14 +91,24 @@
 
 <!---------------- Analysis ---------------->
 <div id="analysis">
-<hr><h1><align="center"><font color=#2E86C1>Analysis</font></h1>
+<hr><h1><align="center"><font color=#2E86C1>Analysis: Convert JSON into Python Pandas Dataframe</font></h1>
 <!------------------------------------->
 
 
 <h3><br><br>How to clean text, get API into panda data frame</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+<p>API data returned in JSON can be converted into a Python Pandas dataframe for data analysis and visualization.
 
+This can be done in 2 ways:
+
+1. Using the json_normalize function: http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.io.json.json_normalize.html
+
+
+2. Creating a dataframe 
+
+In our example using the NPR API, our API call returned lots of data, but we were only interested in the story categories to build our visualization. This information was nested in several layers of JSON data and metadata, so we found it more intuitive to build our dataframe by looping through the JSON object, creating a Python dictionary for each story, and converting our list of dictionaries into a Pandas dataframe.
+
+The sample code linked below walks through the process of creating a Pandas dataframe from a JSON object.</p>
 <h4>Resource Links:</h4>
 <li><a href="http://pandas.pydata.org/pandas-docs/version/0.18.1/tutorials.html" target="_blank">Panda Tutorials</a></li>
 <li><a href="http://pandas.pydata.org/pandas-docs/stable/text.html" target="_blank">Working with Text Data</a></li>
@@ -107,9 +117,11 @@
 <h4>Samples:</h4>
 <li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">NPR API json sample</a></li>
 
-<h3><br><br>How to do elementary text analysis</h3>
+<h3><br><br>Analysis: Create data files for network visualization</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+<p>
+In order to create our network visualization showing how news story categories are related, we need to analyze and restructure our data.  Network visualizations are made of two components, nodes (the bubbles) and joins (the lines connecting the bubbles).  In our NPR example, the nodes will be the distinct story categories and the joins will be pairs of related categories.
+Our dataframe has a column containing a list of category tags for each story.  The sample code linked below walks through the analysis and restructuring of this information to output csv files for nodes and joins.</p>
 
 <h4>Resource Links:</h4>
 <li><a href="http://scikit-learn.org/stable/auto_examples/text/document_clustering.html" target="_blank">Text Analysis/Clustering</a></li>
@@ -125,41 +137,29 @@
 <hr><h1><align="center"><font color=#2E86C1>Visualization</font></h1>
 <!---------------------------------------------------------->
 
-<h3><br><br>Document Term Frquency Matrix</h3>
-
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+<h3><br><br>Visualization: Network visualization in Python with NetworkX</h3>
 
 <h4>Resource Links:</h4>
-
+The visualizations can be customized using formatting code described in the documentation: <a href="http://sebastianraschka.com/Articles/2014_twitter_wordcloud.html" target="_blank">https://networkx.readthedocs.io/</a>
+<br>
 <h4>Samples:</h4>
 
 
-<h3><br><br>World Clouds</h3>
-
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
-
-<h4>Resource Links:</h4>
-<li><a href="https://github.com/amueller/word_cloud" target="_blank">Word Cloud in Python</a></li>
-<li><a href="http://sebastianraschka.com/Articles/2014_twitter_wordcloud.html" target="_blank">Twitter to Word Cloud</a></li>
-
-<h4>Samples:</h4>
-<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">Word cloud using NPR API</a></li>
-
-<h3><br><br>Network Graphs</h3>
-
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
-
-<h4>Resource Links:</h4>
-<li><a href="https://networkx.github.io/" target="_blank">Python networkx library</a></li>
-
-<h4>Samples:</h4>
 
 
 <h3><br><br>D3</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+<p> D3 is a JavaScript library that helps visualize data in new and interesting ways.  JavaScript tends to be a secondary language for data scientists.  Most of us code in There are packages available for both Python and R that will allow a large amount of the functionality of  D3 without needing to learn JavaScript or the particulars of the D3 language. Particularly for a data scientist, using a package in the primary language of analysis is the way to go.  D3 is highly specialized and is best for true visualization projects.  Many of the add ons will get you 90% of the way there, with the ability to include a little JavaScript for additional features.  As more of these features are added and more functionality is desired, it makes sense to make the full switch into D3.  Below are some tools to help you get started.
+
+
 
 <h4>Resource Links:</h4>
+<li><a href="https://pypi.python.org/pypi/python-nvd3/" target="_blank">Python Package NVD3</a></li>
+<li><a href="http://christophergandrud.github.io/networkD3/" target="_blank">R Library</a></li>
+<li><a href="http://chimera.labs.oreilly.com/books/1230000000345/index.html" target="_blank">Starting from Scratch</a></li>
+<li><a href="http://www.coppelia.io/2014/07/an-a-to-z-of-extra-features-for-the-d3-force-layout/" target="_blank">Building From a Template</a></li>
+<li><a href="https://bl.ocks.org/" target="_blank">Building From a Template</a></li>
+
 <li><a href="http://adilmoujahid.com/posts/2015/01/interactive-data-visualization-d3-dc-python-mongodb/" target="_blank">Interactive Data Visualization with D3</a></li>
 <li><a href="https://opendatadaydc.hackpad.com/Intro-to-D3-issXcwlDxKp" target="_blank">Intro to D3</a></li>
 <li><a href="http://chimera.labs.oreilly.com/books/1230000000345/index.html" target="_blank">Interactive Data Visualization for the Web</a></li>
@@ -205,7 +205,7 @@
 
 <h3><br><br>What is Heroku</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+<p>Heroku is a hosting site that makes it easy for you get a website up quickly.</p>
 
 <h4>Resource Links:</h4>
 <li><a href="http://databench.trivial.io/en/latest/" target="_blank">Python/D3/Heroku</a></li>

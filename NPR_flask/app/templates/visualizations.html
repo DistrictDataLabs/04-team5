@@ -91,7 +91,7 @@
 
 
 
-</div>
+
 
 <h3  align="center">Static Graphs</h3>
 
@@ -99,23 +99,21 @@
         
 	       
     <div class="col-md-12 text-center">
-                    <p>Network Graph</p>
-                    	<p><img src="{{url_for('static', filename='python_network1.png')}}" style="height: 400px"></img></p>
+                <p>Network Graph</p>
+                <p><img src="{{url_for('static', filename='python_network1.png')}}" style="height: 400px"></img></p>
     </div>
 
 
 
-
-
     <div class="col-md-12 text-center">
-				<p>Circular Graph</p>
-                          <p><img src="{{url_for('static', filename='python_network2.png')}}" style="height: 400px"></img></p>
+			<p>Circular Graph</p>
+                 <p><img src="{{url_for('static', filename='python_network2.png')}}" style="height: 400px"></img></p>
     </div>
 
 
     <div class="col-md-12 text-center">
-				<p>Network Graph with sample formatting</p>
- 				<p><img src="{{url_for('static', filename='python_network3.png')}}" style="height: 400px"></img></p>
+			<p>Network Graph with sample formatting</p>
+ 			<p><img src="{{url_for('static', filename='python_network3.png')}}" style="height: 400px"></img></p>
     </div>
 
 
@@ -125,9 +123,24 @@
 <br> 
 <h3  align="center">Network Graph (D3)</h3>
 <hr>
-         <!-- Andrew's Graph -->   
+
+
+<!-- Andrew's Graph -->   
+
+<div class="col-md-12 text-center">
+              <p  align="center"><iframe height="600px" width="800px" src="{{url_for('d31')}}"></iframe></p>
+</div>
+
+
+<div class="col-md-12 text-center">
+              <p  align="center"><iframe height="600px" width="800px" src="{{url_for('d32')}}"></iframe></p>
+</div>
+
+
   
-      <p  align="center"><iframe height="600px" width="800px" src="{{url_for('d31')}}"></iframe></p>
+
+
+</div>
 <!--Footer-->
 
 <div class="footer"><h4>2016 - <a href="https://districtdatalabs.silvrback.com/">District Data Labs</a> Incubator Team 6</h4></div>
