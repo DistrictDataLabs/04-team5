@@ -43,3 +43,9 @@ def d32():
 	return render_template('d32.html',
 							title='d32'
 							)       
+       
+@app.route('/TRY_THIS')
+def TRY_THIS():
+	return render_template('TRY_THIS.html',
+							title='TRY_THIS'
+							)       
