@@ -76,7 +76,17 @@
 
 <h3><br><br>How to download the NPR API</h3>
 
-<p>XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX XXXXX XX XXX XXXX XX XX XXX XX XXXXX XX XXXX XX</p>
+<p>One of the great things about NPR’s API is that it is well-designed and heavily documented. NPR provides a majority of the information needed to extract data through their website, <a href="http://www.npr.org/api/index" target="_blank">http://www.npr.org/api/index</a>. The website provides several useful tools for navigating the API, including a “Query Builder” tool. Most importantly however, the homepage has a link where you can get assigned an API key. Once you have an API key, you’ll need to figure out the content for the url that will allow you to access the exact data you’re looking for. The <a href="http://www.npr.org/api/queryGenerator.php" target="_blank">Query Builder</a> mentioned earlier is designed for exactly this purpose. Each additional specification you are looking for becomes a piece of that url, starting with your API key.
+The API’s default output is a format called NPRML, which is a custom output. However, it is relatively straightforward to convert to a more standard output like JSON. To control the output type, include the variable “&format=” to the URL like this:</p>
+
+<p align="center"><img src="{{url_for('static', filename='howapi1.png')}}" style="height: 20px"></img></p>
+
+<p align="center"><img src="{{url_for('static', filename='howapi2.png')}}" style="height: 40px"></img></p>
+
+
+<p>Now that your outputs are set up, the next step is setting up python to read in the results and output them in a way that’s helpful. With the NPR API, the output features nested lists and dictionaries, which can be challenging when trying to extract data. We have drafted up a few examples of how to parse the JSON and export it in a one-row-per-story format. You can try a few from our Github to experiment with how to access the nested data. </p>
+
+<p align="center"><img src="{{url_for('static', filename='howapi3.png')}}" style="height: 400px"></img></p>
 
 <h4>Resource Links:</h4>
 <li><a href="https://www.codecademy.com/ru/tracks/npr" target="_blank">Codecademy NPR API</a></li>
@@ -91,24 +101,24 @@
 
 <!---------------- Analysis ---------------->
 <div id="analysis">
-<hr><h1><align="center"><font color=#2E86C1>Analysis: Convert JSON into Python Pandas Dataframe</font></h1>
+<hr><h1><align="center"><font color=#2E86C1>Analysis</font></h1>
 <!------------------------------------->
 
 
-<h3><br><br>How to clean text, get API into panda data frame</h3>
+<h3><br><br>Convert JSON into panda data frame</h3>
 
-<p>API data returned in JSON can be converted into a Python Pandas dataframe for data analysis and visualization.
+<p>API data returned in JSON can be converted into a Python Pandas dataframe for data analysis and visualization. This can be done in 2 ways:</p>
 
-This can be done in 2 ways:
-
-1. Using the json_normalize function: http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.io.json.json_normalize.html
+<li>1. Using the json_normalize function: http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.io.json.json_normalize.html</li>
 
 
-2. Creating a dataframe 
+<li>2. Creating a dataframe</li>
 
-In our example using the NPR API, our API call returned lots of data, but we were only interested in the story categories to build our visualization. This information was nested in several layers of JSON data and metadata, so we found it more intuitive to build our dataframe by looping through the JSON object, creating a Python dictionary for each story, and converting our list of dictionaries into a Pandas dataframe.
+<br>
 
-The sample code linked below walks through the process of creating a Pandas dataframe from a JSON object.</p>
+<p>In our example using the NPR API, our API call returned lots of data, but we were only interested in the story categories to build our visualization. This information was nested in several layers of JSON data and metadata, so we found it more intuitive to build our dataframe by looping through the JSON object, creating a Python dictionary for each story, and converting our list of dictionaries into a Pandas dataframe. The sample code linked below walks through the process of creating a Pandas dataframe from a JSON object.</p>
+
+
 <h4>Resource Links:</h4>
 <li><a href="http://pandas.pydata.org/pandas-docs/version/0.18.1/tutorials.html" target="_blank">Panda Tutorials</a></li>
 <li><a href="http://pandas.pydata.org/pandas-docs/stable/text.html" target="_blank">Working with Text Data</a></li>
@@ -117,7 +127,7 @@ The sample code linked below walks through the process of creating a Pandas data
 <h4>Samples:</h4>
 <li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">NPR API json sample</a></li>
 
-<h3><br><br>Analysis: Create data files for network visualization</h3>
+<h3><br><br>Create data files for network visualization</h3>
 
 <p>
 In order to create our network visualization showing how news story categories are related, we need to analyze and restructure our data.  Network visualizations are made of two components, nodes (the bubbles) and joins (the lines connecting the bubbles).  In our NPR example, the nodes will be the distinct story categories and the joins will be pairs of related categories.
@@ -137,12 +147,13 @@ Our dataframe has a column containing a list of category tags for each story.  T
 <hr><h1><align="center"><font color=#2E86C1>Visualization</font></h1>
 <!---------------------------------------------------------->
 
-<h3><br><br>Visualization: Network visualization in Python with NetworkX</h3>
+<h3><br><br>Network visualization in Python with NetworkX</h3>
 
 <h4>Resource Links:</h4>
 The visualizations can be customized using formatting code described in the documentation: <a href="http://sebastianraschka.com/Articles/2014_twitter_wordcloud.html" target="_blank">https://networkx.readthedocs.io/</a>
 <br>
-<h4>Samples:</h4>
+<h4>Code Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">NetworkX using NPR API</a></li>
 
 
 
@@ -167,7 +178,7 @@ The visualizations can be customized using formatting code described in the docu
 <li><a href="http://bl.ocks.org/d3noob/5141278" target="_blank">Basic Directional Force Layout</a></li>
 <li><a href="http://bl.ocks.org/ccmcc/5182685" target="_blank">D3 Force Diagram with CSV</a></li>
 
-<h4>Samples:</h4>
+<h4>Code Samples:</h4>
 <li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">D3 using NPR API</a></li>
 
 <br>
@@ -180,20 +191,41 @@ The visualizations can be customized using formatting code described in the docu
 
 <h3><br><br>What is bootstrap</h3>
 
-<p>Bootstrap is a font-end framework used to create websites and applications. A collection of html, css, and javascript tools eases web design.</p>
+<p>Bootstrap is a front-end framework used to create websites and applications. A collection of html, css, and javascript tools eases web design.</p>
 <h4>Resource Links:</h4>
 <li><a href="http://getbootstrap.com/getting-started/" target="_blank">Get Bootstrap: Getting Started</a></li>
 <li><a href="http://www.w3schools.com/bootstrap/bootstrap_get_started.asp" target="_blank">w3schools.com Bootstrapping</a></li>
 <li><a href="http://startbootstrap.com/bootstrap-resources/" target="_blank">Start Bootstrap</a></li>
 <li><a href="https://almsaeedstudio.com/blog/10-Free-Responsive-Bootstrap-Templates-For-2016" target="_blank">Free Bootstrap templates</a></li>
 
-<h4>Samples:</h4>
-<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">Vizbuzz homepage bootstrap template</a></li>
+
+<h4>Code Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">Vizbuzz bootstrap template</a></li>
 
 
 <h3><br><br>What is Flask</h3>
 
-<p>Flask is a web framework written in Python. Companies such as LinkedIn and Pinterest use Flask.</p>
+<p>Flask is a web framework written in Python. Companies such as LinkedIn and Pinterest use Flask. 
+
+Below is a picture of the vizbuzz flask app directory. As you can see it is pretty simple </p>
+
+<br><li>The list of html pages must be listed in the  <b>views.py</b> file.</li>
+<br><li>The  <b>requirements.txt</b> file is where you specify which Python packages are required to successfully run your app.</li>
+
+
+
+<p align="center"><img src="{{url_for('static', filename='howflask1.png')}}" style="height: 300px"></img></p>
+
+<br><li>The <b>templates</b> folder is where html documents go. This includes d3 html files</li>
+
+<p align="center"><img src="{{url_for('static', filename='howflask_temp.png')}}" style="height: 200px"></img></p>
+
+<br><li>The <b>static</b> folder contains our pictures, style sheets, and CSS files.</li>
+
+<p align="center"><img src="{{url_for('static', filename='howflask_static.png')}}" style="height: 400px"></img></p>
+
+
+
 <h4>Resource Links:</h4>
 <li><a href="https://realpython.com/blog/python/flask-by-example-part-1-project-setup/" target="_blank">Flask by Example</a></li>
 <li><a href="https://www.youtube.com/watch?v=nw9oGzZi8Hk" target="_blank">Flask YouTube Tutorial</a></li>
@@ -201,11 +233,21 @@ The visualizations can be customized using formatting code described in the docu
 <li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud" target="_blank">Heroku/Flask Megatutorial</a></li>
 <li><a href="https://github.com/wsankey/dew_flask" target="_blank">Dew_Flask</a></li>
 
+<h4>Code Samples:</h4>
+<li><a href="https://github.com/vizbuzz/vizbuzz" target="_blank">Vizbuzz flask</a></li>
+
 
 
 <h3><br><br>What is Heroku</h3>
 
-<p>Heroku is a hosting site that makes it easy for you get a website up quickly.</p>
+<p>Heroku is a hosting site that makes it easy for you get a website up quickly. It's a great choice for experimenting since it's free for smaller size web apps. 
+
+<br>
+<br>
+
+Once you have your flask running locally, you can deploy it onto Heroku. <a href="https://devcenter.heroku.com/articles/git" target="_blank">Deploying with Git</a> clearly explains the deployment process step-by-step.
+
+</p>
 
 <h4>Resource Links:</h4>
 <li><a href="http://databench.trivial.io/en/latest/" target="_blank">Python/D3/Heroku</a></li>
